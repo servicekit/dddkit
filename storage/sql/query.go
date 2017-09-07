@@ -35,19 +35,19 @@ func TranslateQuery(query *_storage.Query) string {
 		case _storage.LessThan:
 			filterList = append(
 				filterList,
-				fmt.Sprintf("%<%s", filter.Property, filter.Value))
+				fmt.Sprintf("%s<%s", filter.Property, filter.Value))
 		case _storage.LessThanOrEqual:
 			filterList = append(
 				filterList,
-				fmt.Sprintf("%<=%s", filter.Property, filter.Value))
+				fmt.Sprintf("%s<=%s", filter.Property, filter.Value))
 		case _storage.GreaterThan:
 			filterList = append(
 				filterList,
-				fmt.Sprintf("%>%s", filter.Property, filter.Value))
+				fmt.Sprintf("%s>%s", filter.Property, filter.Value))
 		case _storage.GreaterThanOrEqual:
 			filterList = append(
 				filterList,
-				fmt.Sprintf("%>=%s", filter.Property, filter.Value))
+				fmt.Sprintf("%s>=%s", filter.Property, filter.Value))
 		}
 	}
 
